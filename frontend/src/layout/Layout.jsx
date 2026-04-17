@@ -3,6 +3,7 @@ import Header from "../components/header/Header";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/footer/Footer";
 import ScrollToTop from "../components/scrollToTop/ScrollToTop";
+import Sidebar from "../components/sidebar/Sidebar";
 
 const Layout = () => {
   return (
@@ -10,7 +11,10 @@ const Layout = () => {
       <ScrollToTop />
       <Header />
       <main>
-        <Outlet />
+        <div className="flex flex-1">
+          <Sidebar />
+          <Outlet />
+        </div>
       </main>
       <Footer />
     </>
