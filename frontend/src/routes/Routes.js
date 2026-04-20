@@ -4,4 +4,5 @@ export const ROUTES = {
   SIDEBAR: "/sidebar",
   SIGNUP :"/signup",
   LOGIN : "/login",
+  TASKS: "/task"
 }

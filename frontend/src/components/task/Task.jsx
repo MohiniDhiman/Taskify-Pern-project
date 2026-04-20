@@ -1,26 +1,27 @@
 import React, { useState } from "react";
 import { FaCheck, FaEdit, FaUpload } from "react-icons/fa";
 
-const Task = () => {
+const Task = ({todos}) => {
   const [submitted, setSubmitted] = useState(false);
 
   return (
     <>
-      <div className="bg-yellow-50 rounded-2xl flex justify-between p-4 mt-10">
+    { todos?.map ((todos,idx)=>(
+      <div key={idx} className="bg-yellow-50 rounded-2xl flex justify-between p-4 mt-10">
 
         <div className="flex flex-col gap-1">
-          <p className="text-blue-500 font-bold">complete the homework</p>
+          <p className="text-blue-500 font-bold">{todos.title}</p>
 
           <p className="text-sm">
-            read 2 and 3 chapter and find the answers give in back exercise
+          {todos.description}
           </p>
 
-          <p className="text-sm font-bold">Assigned By : mrs.neha</p>
+          <p className="text-sm font-bold">{todos.assigned}</p>
         </div>
 
 
         <div className="flex flex-col gap-3 items-end">
-          <div className="text-sm text-red-600">Deadline : 2-05-2026</div>
+          <div className="text-sm text-red-600">{todos.deadline}</div>
 
           {!submitted ? (
             <button
@@ -45,6 +46,7 @@ const Task = () => {
           )}
         </div>
       </div>
+))}
     </>
   );
 };

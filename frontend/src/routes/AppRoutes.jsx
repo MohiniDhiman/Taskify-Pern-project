@@ -6,6 +6,7 @@ import { ROUTES } from "./Routes";
 import Sidebar from "../components/sidebar/Sidebar";
 import Login from "../auth/Login";
 import Signup from "../auth/Signup";
+import TaskModal from "../components/modal/TaskModal";
 
 const AppRoutes = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const AppRoutes = createBrowserRouter([
   {
     path: ROUTES.SIGNUP,
     element: <Signup />,
+  },
+  {
+    path: ROUTES.TASKS,
+    element: <TaskModal />,
   },
 ]);
 export default AppRoutes;

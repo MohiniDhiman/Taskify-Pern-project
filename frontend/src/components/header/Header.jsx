@@ -18,7 +18,7 @@ const Header = () => {
           <p>
             <IoNotifications />
           </p>
-          <p>
+          <p> 
             <FaUserGraduate />
           </p>
         </div>
