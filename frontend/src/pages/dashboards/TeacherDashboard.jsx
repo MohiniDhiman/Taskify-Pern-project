@@ -12,7 +12,7 @@ const TeacherDashboard = () => {
   const [todos, setTodos] = useState([]);
   return (
     <>
-      <div className="m-10 mx-15 w-full">
+      <div className="m-10 w-3/4">
         <div className="flex justify-between mb-10">
           <h1 className="text-2xl font-bold ml-4">Tasks</h1>
           <button
@@ -34,24 +34,24 @@ const TeacherDashboard = () => {
         <div className="flex flex-row justify-center gap-8 text-black font-semibold text-md">
           <button className="bg-green-100 border-2 border-green-200 rounded-md w-50 h-20 inline-flex items-center justify-center gap-2">
             {" "}
-            <p className="bg-green-700/30 rounded-full">
+            <p className="bg-green-700/30 rounded-full ">
               <FaRegCheckCircle className="text-3xl p-1.5" />
             </p>{" "}
-            completed Students
+            Completed
           </button>
           <button className="bg-red-100 border-2 border-red-200 rounded-md w-50 h-20 inline-flex items-center justify-center gap-2">
             {" "}
             <p className="bg-red-600/30 rounded-full">
               <MdOutlineAccessTime className="text-3xl p-1.5" />
             </p>{" "}
-            pending Students
+            Pending
           </button>
           <button className="bg-pink-100 border-2 border-pink-200 rounded-md w-50 h-20 inline-flex items-center justify-center gap-2">
             {" "}
             <p className="bg-pink-600/30 rounded-full">
               <FaChartLine className=" text-3xl p-1.5" />
             </p>
-            monthy performace
+            Performance
           </button>
           <button className="bg-yellow-100 border-2 border-yellow-200 rounded-md w-50 h-20 inline-flex items-center justify-center gap-2">
             {" "}

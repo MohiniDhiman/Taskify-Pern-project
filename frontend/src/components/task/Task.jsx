@@ -9,7 +9,7 @@ const Task = ({todos}) => {
     { todos?.map ((todos,idx)=>(
       <div key={idx} className="bg-yellow-50 rounded-2xl flex justify-between p-4 mt-10">
 
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 w-3/4">
           <p className="text-blue-500 font-bold">{todos.title}</p>
 
           <p className="text-sm">

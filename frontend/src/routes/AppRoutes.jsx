@@ -4,8 +4,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layout/layout";
 import { ROUTES } from "./Routes";
 import Sidebar from "../components/sidebar/Sidebar";
-import Login from "../auth/Login";
-import Signup from "../auth/Signup";
+import Login from "../pages/auth/Login";
+import Signup from "../pages/auth/Signup";
 import TaskModal from "../components/modal/TaskModal";
 
 const AppRoutes = createBrowserRouter([

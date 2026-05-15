@@ -1,6 +1,12 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
 const Signup = () => {
+  const { register, handleSubmit, reset } = useForm();
+
+  const onSubmit = (data) => {
+    console.log("data", data);
+  };
   return (
     <>
       <div className="m-10">
@@ -10,7 +16,10 @@ const Signup = () => {
             Sign Up
           </h1>
 
-          <form className="flex flex-col gap-6 items-center">
+          <form
+            className="flex flex-col gap-6 items-center"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             {/* First Name */}
             <div className="relative">
               <label className="absolute -top-2 left-2 text-xs bg-white px-1 text-purple-800">
@@ -19,6 +28,7 @@ const Signup = () => {
               <input
                 type="text"
                 className="border border-purple-800 rounded-md h-10 w-72 px-3 outline-none"
+                {...register("firstname", { required: "name is required" })}
               />
             </div>
 
@@ -30,6 +40,7 @@ const Signup = () => {
               <input
                 type="text"
                 className="border border-purple-800 rounded-md h-10 w-72 px-3 outline-none"
+                {...register("lastname", { required: "lastname is required" })}
               />
             </div>
 
@@ -41,6 +52,7 @@ const Signup = () => {
               <input
                 type="email"
                 className="border border-purple-800 rounded-md h-10 w-72 px-3 outline-none"
+                {...register("email", { required: "email is required" })}
               />
             </div>
 
@@ -54,6 +66,7 @@ const Signup = () => {
                 <option>Student</option>
                 <option>Teacher</option>
                 <option>Admin</option>
+                {...register("role", { required: "role is required" })}
               </select>
             </div>
 
@@ -65,6 +78,7 @@ const Signup = () => {
               <input
                 type="password"
                 className="border border-purple-800 rounded-md h-10 w-72 px-3 outline-none"
+                {...register("password", { required: "password is required" })}
               />
             </div>
 
@@ -76,6 +90,9 @@ const Signup = () => {
               <input
                 type="password"
                 className="border border-purple-800 rounded-md h-10 w-72 px-3 outline-none"
+                {...register("confirmPassword", {
+                  required: "confirmPassword is required",
+                })}
               />
             </div>
 

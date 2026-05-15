@@ -8,7 +8,7 @@ import { FaTrophy } from "react-icons/fa6";
 const StudentDashboard = () => {
   return (
     <>
-      <div className="m-10 mx-15 ">
+      <div className="m-10 w-3/4">
         <div className="bg-purple-100 h-40 rounded-2xl mb-10 flex justify-between">
           <div className="mx-10 my-10">
             <h1 className="text-4xl font-bold mb-2">hi , dear</h1>
@@ -24,43 +24,29 @@ const StudentDashboard = () => {
             <p className="bg-green-700/30 rounded-full">
               <FaRegCheckCircle className="text-3xl p-1.5" />
             </p>{" "}
-            completed tasks
+            Completed tasks
           </button>
           <button className="bg-red-100 border-2 border-red-200 rounded-md w-50 h-20 inline-flex items-center justify-center gap-2">
             {" "}
             <p className="bg-red-600/30 rounded-full">
               <MdOutlineAccessTime className="text-3xl p-1.5" />
             </p>{" "}
-            pending tasks
+            Pending tasks
           </button>
           <button className="bg-pink-100 border-2 border-pink-200 rounded-md w-50 h-20 inline-flex items-center justify-center gap-2">
             {" "}
             <p className="bg-pink-600/30 rounded-full">
               <FaChartLine className=" text-3xl p-1.5" />
             </p>
-            monthy performace
+            Performance
           </button>
           <button className="bg-yellow-100 border-2 border-yellow-200 rounded-md w-50 h-20 inline-flex items-center justify-center gap-2">
             {" "}
             <p className="bg-yellow-500/30 rounded-full">
               <FaTrophy className="text-3xl p-1.5" />
             </p>{" "}
-            rewards
+            Rewards
           </button>
-        </div>
-        <div>
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
-          <Task />
         </div>
       </div>
     </>
